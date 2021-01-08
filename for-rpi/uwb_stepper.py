@@ -85,6 +85,8 @@ def ctrl_dir(ang):
         speed_factor = 0.7
     elif ang <= -8 or ang >= 8:
         speed_factor = 0.8
+    else:
+        speed_factor = 1
 
     if ang > 0 :
         return {'left':speed_factor, 'right':1.0}
@@ -102,6 +104,7 @@ def loop():
     
     while True:
         angual, distance = uwb.ser_read()
+        print("angual: {}, distance: {}".format(angual,distance))
         avg_distance = avg_dist(distance)
 
         if turning : #確認是否掉頭完畢
