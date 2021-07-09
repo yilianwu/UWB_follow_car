@@ -1,0 +1,3 @@
+[submodule "follow-me-car"]
+	path = follow-me-car
+	url = https://github.com/yilianwu/follow-me-car.git
